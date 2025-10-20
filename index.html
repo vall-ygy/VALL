@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Converter Lite</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+ </head>
+ <body>
+    <header>
+	  <h1>Selamat datang di converter lite!!</h1>
+	</header>
+	
+	<main class="container">
+	   <div class="content-area">
+	      <div id="qrGenerator" class="tool-content active">
+		    <h2><i class="fa-solid fa-qrcode"></i> Buat kodeQR</h2>
+		    <p>Ubah tautan anda menjadi kode QR. Anda bisa mendownload PNG-Nya.</p>
+		    <input id="qrInput" type="text" placeholder="https://contoh.com/....." />
+		    <button id="generateQrBtn">Buat QR</button>
+		  
+		    <div id="qrResult" class="result-box"></div>
+		  
+		    <button id="downloadQrBtn">Download PNG</button>
+          </div>
+
+          <div id="passwordGenerator" class="tool-content">
+		    <h2><i class="fa-solid fa-key"></i> Generator Password Aman</h2>
+		    <p>Buat password kuat - klik hasilnya untuk menyalin.</p>
+		  
+		  <div class="options">
+		    <label>Panjang karakter: <strong><span id="lengthValue">12</span></strong></label>
+			<input id="lengthSlider" type="range" min="8" max="32" value="12" />
+			
+			<label><input id="includeUppercase"  type="checkbox" checked/> Huruf besar (A-Z)</label>
+			<label><input id="includeNumbers" type="checkbox" checked/> Angka (0-9)</label>
+			<label><input id="includeSymbols" type="checkbox" checked/> Simbol (!@#$%^&*)</label>
+		  </div>
+		  
+		  <button id="generatePassBtn">Buat Password</button>
+		  <div id="passwordResult" class="result-box" title="Klik untuk menyalin">Password akan muncul di sini....</div>
+		  </div>
+        </div>	
+
+        <nav class="side-menu" aria-hidden="false">
+		 <ul class="menu-items">
+		    <li><a href="#" data-tool="qrGenerator" class="active-link" title="QR Generator"><i class="fa-solid fa-qrcode"></i></a></li>
+			<li><a href="#" data-tool="passwordGenerator" title="Password Generator"><i class="fa-solid fa-key"></i></a></li>
+		 </ul>
+		</nav>
+	</main>
+</body>
+</html>
